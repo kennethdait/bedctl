@@ -16,6 +16,14 @@
     * UI Class
     * Handle UI tasks
     */
+   class UI {
+     static displayBooks() {
+
+       const books = storedBooks;
+
+       books.forEach((book) => UI.addBookToList(book));
+     }
+   }
 
 
 
