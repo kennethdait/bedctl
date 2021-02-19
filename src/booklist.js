@@ -79,7 +79,7 @@
 
 
      // Event: Display books
-
+     document.addEventListener('DOMContentLoaded', UI.displayBooks());
 
      // Event: Add a book
 
