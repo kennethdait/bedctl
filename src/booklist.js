@@ -68,6 +68,13 @@
       list.appendChild(row);
      }
 
+     static deleteBook(target) {
+       // ensure element we delete, has the classname "delete"
+       if(target.classList.contains('delete')) {
+         target.parentElement.parentElement.remove();
+       }
+     }
+
      static clearFields() {
       document.querySelector('#title').value = '';
       document.querySelector('#author').value = '';
@@ -112,6 +119,10 @@
 
 
      // Event: Remove a book
+     document.querySelector('#book-list').addEventListener('click', (e) => {
+       //console.log(e.target);
+       UI.deleteBook(e.target);
+     });
 
 
 }());
